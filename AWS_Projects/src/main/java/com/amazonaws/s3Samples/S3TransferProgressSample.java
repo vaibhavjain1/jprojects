@@ -139,7 +139,7 @@ public class S3TransferProgressSample {
                             JOptionPane.showMessageDialog(frame,
                                     "Unable to upload file to Amazon S3: " + e.getMessage(),
                                     "Error Uploading File", JOptionPane.ERROR_MESSAGE);
-                        } catch (InterruptedException e) {}
+                        } catch (InterruptedException ignored) {}
                         break;
                     }
                 }
@@ -155,7 +155,7 @@ public class S3TransferProgressSample {
 
     private void createAmazonS3Bucket() {
         try {
-            if (tx.getAmazonS3Client().doesBucketExist(bucketName) == false) {
+            if (!tx.getAmazonS3Client().doesBucketExist(bucketName)) {
                 tx.getAmazonS3Client().createBucket(bucketName);
             }
         } catch (AmazonClientException ace) {
