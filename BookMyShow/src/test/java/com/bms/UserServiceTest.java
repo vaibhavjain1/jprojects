@@ -1,4 +1,4 @@
-package com.rockingengineering.bms;
+package com.bms;
 
 import static org.junit.Assert.assertTrue;
 
@@ -12,10 +12,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.rockingengineering.bms.dto.UserDto;
-import com.rockingengineering.bms.exception.DuplicateRecordException;
-import com.rockingengineering.bms.repository.UserRepository;
-import com.rockingengineering.bms.service.UserService;
+import com.bms.dto.UserDto;
+import com.bms.exception.DuplicateRecordException;
+import com.bms.repository.UserRepository;
+import com.bms.service.UserService;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
