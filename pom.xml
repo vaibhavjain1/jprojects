@@ -9,5 +9,6 @@
         <module>AWS_Projects</module>
         <module>download</module>
         <module>BookMyShow</module>
+        <module>Dependency_Downloader</module>
     </modules>
 </project>
